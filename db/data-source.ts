@@ -6,6 +6,8 @@ import { Song } from "src/songs/song.entity";
 import { User } from "src/users/user.entity";
 import { DataSource, DataSourceOptions } from "typeorm";
 
+require('dotenv').config();
+
 export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
     imports: [ConfigModule],
     inject: [ConfigService],

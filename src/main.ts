@@ -34,7 +34,6 @@ async function bootstrap() {
 
   const configSrvice = app.get(ConfigService);
   await app.listen(configSrvice.get<number>('port'));
-  console.log(configSrvice.get<string>('NODE_ENV'));
 
   if (module.hot) {
     module.hot.accept();
